@@ -24,7 +24,7 @@ typedef struct
     int nedge;
 
     vec3 *points;
-    int *face_idxs;
+    int **face_idxs;
 
 } OFF;
 

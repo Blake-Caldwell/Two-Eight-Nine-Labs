@@ -6,6 +6,6 @@
 OFF *create_off();
 void destroy_off(OFF *off);
 
-int readOFFFile(char *file_name, OFF *off);
+OFF *readOFFFile(char *file_name);
 void writeOFFFile(char *file_name, OFF *off);
 #endif
