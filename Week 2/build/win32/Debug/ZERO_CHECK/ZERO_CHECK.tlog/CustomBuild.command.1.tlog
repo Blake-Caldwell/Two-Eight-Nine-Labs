@@ -1,0 +1,10 @@
+^C:\GITHUB\289-LABS\WEEK 1\BUILD\CMAKEFILES\7A3E7C8A785F51EA1CE402DCB920EE5B\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/GitHub/289-Labs/Week 1" "-BC:/GitHub/289-Labs/Week 1/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/GitHub/289-Labs/Week 1/build/week1.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

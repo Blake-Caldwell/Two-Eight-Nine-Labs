@@ -3,8 +3,8 @@
 
 #include "types.h"
 
-OFF *create_OFF();
-void destroy_OFF(OFF *off);
+OFF *create_off();
+void destroy_off(OFF *off);
 
 OFF *readOFFFile(char *file_name);
 void writeOFFFile(char *file_name, OFF *off);

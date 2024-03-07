@@ -6,7 +6,7 @@
 
 #define LINE_MAX 200
 
-OFF *create_OFF()
+OFF *create_off()
 {
     OFF *ptr = malloc(sizeof(OFF));
 
@@ -26,7 +26,7 @@ OFF *create_OFF()
     return ptr;
 }
 
-void destroy_OFF(OFF *off)
+void destroy_off(OFF *off)
 {
     free(off->points);
 
@@ -104,7 +104,7 @@ OFF *readOFFFile(char *file_name)
     fgets(buff, LINE_MAX, fp);
     sscanf(buff, "%d %d %d", &nvert, &nface, &nedge); // get total of points faces and edges
 
-    OFF *off = create_OFF();
+    OFF *off = create_off();
 
     if (!off)
         return 1;
@@ -137,27 +137,4 @@ OFF *readOFFFile(char *file_name)
 
 void writeOFFFile(char *file_name, OFF *off)
 {
-
-    FILE *write_to = open_file(file_name, "w");
-
-    fputs("OFF\n", write_to);
-
-    fprintf(write_to, "%d %d %d\n", off->nvert, off->nface, off->nedge);
-
-    for (int i = 0; i < off->nvert; i++)
-    {
-        fprintf(write_to, "%f %f %f\n", off->points[i].x, off->points[i].y, off->points[i].z);
-    }
-
-    for (int i = 0; i < off->nface; i++)
-    {
-        fprintf(write_to, "%d", off->face_idxs[i][0]);
-        for (int j = 1; j <= off->face_idxs[i][0]; j++)
-        {
-            fprintf(write_to, " %d", off->face_idxs[i][j]);
-        }
-        fputc('\n', write_to);
-    }
-
-    close_file(write_to);
 }
