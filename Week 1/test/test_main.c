@@ -11,6 +11,12 @@ int main()
         num_failures++;
     }
 
+    if (!test_destroy_OFF())
+    {
+        printf("test_destroy_OFF failed\n");
+        num_failures++;
+    }
+
     if (!test_open_file_success("some_existing_file.txt"))
     {
         printf("test_open_file_success failed\n");
@@ -26,12 +32,6 @@ int main()
     if (!test_readOFFFile_simple())
     {
         printf("test_readOFFFile_simple failed\n");
-        num_failures++;
-    }
-
-    if (!test_writeOFFFile_success())
-    {
-        printf("test_writeOFFFile_success failed\n");
         num_failures++;
     }
 

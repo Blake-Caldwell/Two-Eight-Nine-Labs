@@ -1,5 +1,5 @@
 #include "test_cases.h"
-#include "../OFF_IO.h"
+#include "OFF_IO.h"
 
 #include <stdio.h>
 
@@ -38,10 +38,9 @@ int test_open_file_failure(const char *filename)
     return fp == NULL;
 }
 
-// Tests for OFF file reading (more involved)
 int test_readOFFFile_simple()
 {
-    // Option 1: Create a temporary file with a very basic OFF structure
+    // Create a temporary file with a very basic OFF structure
     FILE *temp_file = fopen("temp_test.off", "w");
     if (!temp_file)
     {
@@ -55,9 +54,7 @@ int test_readOFFFile_simple()
 
     int success = (off != NULL && off->nvert == 3 && off->nface == 2);
 
-    // ... More checks on the contents of the 'off' structure ...
-
     destroy_OFF(off);
-    remove("temp_test.off"); // Clean up the temporary file
+    remove("temp_test.off");
     return success;
 }

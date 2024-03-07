@@ -7,4 +7,6 @@ int test_destroy_OFF();
 int test_open_file_success();
 int test_open_file_failure();
 
+int test_readOFFFile_simple();
+
 #endif
