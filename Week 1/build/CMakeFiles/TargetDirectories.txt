@@ -1,4 +1,0 @@
-F:/GitHub/289-Labs/Week 1/build/CMakeFiles/week1.dir
-F:/GitHub/289-Labs/Week 1/build/CMakeFiles/week1_tests.dir
-F:/GitHub/289-Labs/Week 1/build/CMakeFiles/edit_cache.dir
-F:/GitHub/289-Labs/Week 1/build/CMakeFiles/rebuild_cache.dir
