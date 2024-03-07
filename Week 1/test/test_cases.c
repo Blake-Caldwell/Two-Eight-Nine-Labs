@@ -47,7 +47,7 @@ int test_readOFFFile_simple()
         printf("Error creating temporary test file\n");
         return 0;
     }
-    fprintf(temp_file, "OFF\n3 2 0\n1 2 3\n4 1 2 3 4\n-1 -1 -1\n"); // Simple cube
+    fprintf(temp_file, "OFF\n3 2 0\n1 2 3\n4 1 2 3 4\n3 -1 -1 -1\n"); // Simple cube
     fclose(temp_file);
 
     OFF *off = readOFFFile("temp_test.off");

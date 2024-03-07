@@ -3,6 +3,8 @@
 
 int main()
 {
+    printf("---Testing---\n");
+
     int num_failures = 0;
 
     if (!test_create_OFF())
@@ -17,7 +19,7 @@ int main()
         num_failures++;
     }
 
-    if (!test_open_file_success("some_existing_file.txt"))
+    if (!test_open_file_success("data/test.txt"))
     {
         printf("test_open_file_success failed\n");
         num_failures++;
@@ -37,11 +39,11 @@ int main()
 
     if (num_failures == 0)
     {
-        printf("All tests passed!\n");
+        printf("\nAll %d tests passed!\n", NUM_TESTS);
     }
     else
     {
-        printf("%d tests failed\n", num_failures);
+        printf("%d of %d tests failed\n", num_failures, NUM_TESTS);
     }
 
     return num_failures;
