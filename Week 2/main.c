@@ -37,4 +37,8 @@ int main()
         }
         printf("\n");
     }
+
+    writeOFFFile("data/output.off", bone);
+
+    destroy_OFF(bone);
 }
