@@ -60,23 +60,24 @@ int vec_dot(const vec4i *a, const vec4i *b);
 // cross
 
 void vec_cross(vec3f *result, const vec3f *a, const vec3f *b);
+void vec_cross(vec3i *result, const vec3i *a, const vec3i *b);
 
 // vec2f
 float vec_magnitude(const vec2f *v);
 
 // vec2i
-float vec_magnitude(const vec2i *v); // Or int if you prefer integer magnitude
+float vec_magnitude(const vec2i *v);
 
 // vec3f
 float vec_magnitude(const vec3f *v);
 
 // vec3i
-float vec_magnitude(const vec3i *v); // Or int if you prefer integer magnitude
+float vec_magnitude(const vec3i *v);
 
 // vec4f
 float vec_magnitude(const vec4f *v);
 
 // vec4i
-float vec_magnitude(const vec4i *v); // Or int if you prefer integer magnitude
+float vec_magnitude(const vec4i *v);
 
 #endif
