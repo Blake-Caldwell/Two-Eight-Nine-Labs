@@ -1,0 +1,3 @@
+[submodule "Week 3/freeglut"]
+	path = Week 3/freeglut
+	url = https://github.com/freeglut/freeglut.git
